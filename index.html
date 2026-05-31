@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1c1a17;
+      --accent: #c4502a;
+      --muted: #8a8478;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Spline Sans Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    .card {
+      max-width: 540px;
+      text-align: center;
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(2.8rem, 9vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 400px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      background: var(--ink);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--accent);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="tag">Hello, World</p>
+    <h1>Your page <em>starts</em> here.</h1>
+    <p>This is a simple starting point. Edit the text, swap the colors, and build whatever you have in mind.</p>
+    <a href="#" class="btn">Get Started</a>
+  </main>
+</body>
+</html>
